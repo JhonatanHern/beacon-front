@@ -1,6 +1,7 @@
 :root{
   --main-background-color : #690991;
   --main-color : #222;
+  --header-size : 7vh;
 }
 *{box-sizing: border-box;}
 body{
@@ -43,7 +44,82 @@ header{
   width: 100vw;
   background: #fff;
   padding: .5em 1em;
-  height: 6vh;
+  height: var(--header-size);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+header nav{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: inline-block;
+  background: white;
+  transform: translateX(-100%);
+  transition-duration: .3s;
+  padding: 1em 0;
+}
+header nav.menu-on{
+  transform: none;
+}
+header nav.right-menu{
+  left: 100%;
+  transform: none;
+}
+header nav.right-menu.menu-on{
+  transform: translateX(-100%);
+}
+header nav a{
+  display: block;
+  text-decoration: none;
+  padding: .5em 1.5em;
+  transition-duration: .3s;
+}
+header nav a:hover{
+  background-color: #f0f0f0; 
+}
+header > div{
+  cursor: pointer;
+}
+.burger-icon{
+  display: inline-block;
+  height: var(--header-size);
+  width: var(--header-size);
+  position: relative;
+}
+.header-like{
+  height: var(--header-size);
+  border-radius: 50%;
+  background: #eee;
+  transform: scale(.9);
+}
+.header-like:hover{
+  transform: none;
+}
+.burger-icon span{
+  background-color: var(--main-background-color);
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  left: 50%;
+  top:50%;
+  /*border-radius: 2px;*/
+  transform: translate(-50%,-50%);
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
+}
+.burger-icon span:nth-child(2){transform: translate(-50%,-50%) rotate(90deg);}
+
+.burger-icon-open span{
+  height: 4px;
+}
+.burger-icon-open span:nth-child(1){
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.burger-icon-open span:nth-child(2){
+  transform: translate(-50%,-50%) rotate(-45deg);
 }
 main{
   position: relative;
@@ -52,8 +128,15 @@ main{
   width: 90vw;
   background: rgba(255,255,255,.3);
   padding: 1em;
-  height: 94vh;
+  height: calc( 100vh - var( --header-size ) );
   overflow-y: auto;
+}
+@keyframes fadeIn{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+main > *{
+  animation: fadeIn .3s;
 }
 h1,h2{
   margin-top: 0;
@@ -114,3 +197,21 @@ form{
   font-size: 1.4em;
   cursor: pointer;
 }
+.acordeon{}
+.acordeon > div{
+  display: block;
+  background: white;
+  padding: .2em;
+  font-size: 1.2em;
+}
+.acordeon > div:not(:last-of-type){
+  border-bottom: 1px solid silver;
+}
+.acordeon >div:not(.active):hover{
+  cursor: pointer;
+  background: #eee;
+}
+.acordeon >div:not(.active) div{
+  display: none;
+}
+.acordeon > div > div{}

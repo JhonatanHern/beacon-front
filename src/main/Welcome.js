@@ -31,7 +31,6 @@ const buttCSS = {
 
 class Welcome extends Component{
 	render(){
-		console.log('children ',this.props.children)
 		return (
 			<Fragment>
 				<img alt="beacon" src="/beacon.png" style={centerCSS}/>
@@ -41,7 +40,7 @@ class Welcome extends Component{
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat.
 				</p>
-				<button className="hover" style={buttCSS}>
+				<button className="hover" style={buttCSS} onClick={()=>document.getElementById('signup').click()} >
 					{this.props.children}
 				</button>
 			</Fragment>

@@ -11,6 +11,12 @@ const PictureInputStyle = {
 }
 
 class PictureInput extends Component{
+	constructor(props){
+		super(props)
+		this.state = {
+			data:null
+		}
+	}
 	click(e){
 		console.log('clicked')
 	}
