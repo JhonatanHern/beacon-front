@@ -1,4 +1,4 @@
-import React, { Component , Fragment } from 'react'
+import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 
 /*icons*/
@@ -19,7 +19,7 @@ function getX(el) {
 const SearchBar = props => (
   <div className="search-bar">
     <input placeholder="search"/>
-    <button style={{filter:'grayscale(100%)'}}>🔍</button>
+    <button style={{filter:'grayscale(100%)'}}><span role='img' aria-label="search">🔍</span></button>
   </div>
 )
 
@@ -48,7 +48,7 @@ class Menu extends Component{
         <BurgerIcon onClick={ this.mainMenuToggle } open={this.state.mainMenu}/>
         <SearchBar />
         <div style={{display:'flex',alignItems:'center',position:'relative'}}>
-          <div className='podcast-selector' ref={this.myRef} onClick={this.togglePodcastSelector}>My Podcasts️🔻</div>
+          <div className='podcast-selector' ref={this.myRef} onClick={this.togglePodcastSelector}>My Podcasts️<span role='img' aria-label="open menu">🔻</span></div>
           <PersonIcon onClick={ e => this.setState( { secondMenu : ! this.state.secondMenu } ) } />
         </div>
 

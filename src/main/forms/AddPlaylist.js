@@ -1,14 +1,12 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 const AddPlaylist = (props)=>(
 	<div class="simple-form">
 		<h1>New Playlist</h1>
-		name:
-		<br/>
+		<label>name:</label>
 		<input />
 		<br/>
-		Description:
-		<br/>
+		<label>Description:</label>
 		<textarea />
 		<br/>
 		<button>Create Playlist</button>

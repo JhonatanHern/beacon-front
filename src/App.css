@@ -20,12 +20,19 @@ body{
   background-position: center;
   */
 }
+h1{
+  color: white;
+  text-align: center;
+}
 .hover::hover{
   transform: scale(1.1);
 }
 .b6{
   width: 50%;
 }
+
+
+
 .full-fields{
   position: relative;
 }
@@ -397,4 +404,40 @@ form{
   top: 0;
   left: 50%;
   transform: translate(0,-50%) rotate(45deg);
+}
+.simple-form input,.simple-form textarea,.simple-form label{
+  width: 80%;
+  margin-left: 10%;
+  font-size: 1em;
+  padding: .5em;
+  border: none;
+  border-radius: 3px;
+}
+.simple-form textarea{
+  min-height: 6em;
+  resize: none;
+}
+.simple-form label{
+  display: block;
+  color: white;
+  font-size: 1.4em;
+  padding: .3em;
+}
+.simple-form button,.simple-form a{
+  min-width: 40%;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  background-color: var(--main-background-color);
+  margin: .5em 0;
+  color:#fff;
+  padding: .4em;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: .3em;
+  text-align: center;
+  text-decoration: none;
 }
