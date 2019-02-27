@@ -8,6 +8,9 @@ class BurgerIcon extends Component{
 		}
 		this.handleClick = this.handleClick.bind(this)
 	}
+	static getDerivedStateFromProps(nextProps, prevState) {
+		return { open : nextProps.open }
+	}
 	handleClick( e ){
 		if ( this.props.onClick ) {
 			this.props.onClick( e , ! this.state.open )

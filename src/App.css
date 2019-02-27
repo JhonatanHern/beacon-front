@@ -94,6 +94,7 @@ header > div{
   border-radius: 50%;
   background: #eee;
   transform: scale(.9);
+  transition-duration: .4s;
 }
 .header-like:hover{
   transform: none;
@@ -197,11 +198,12 @@ form{
   font-size: 1.4em;
   cursor: pointer;
 }
-.acordeon{}
+.acordeon h2{
+  text-align: center;
+}
 .acordeon > div{
   display: block;
   background: white;
-  padding: .2em;
   font-size: 1.2em;
 }
 .acordeon > div:not(:last-of-type){
@@ -211,7 +213,188 @@ form{
   cursor: pointer;
   background: #eee;
 }
-.acordeon >div:not(.active) div{
-  display: none;
+.acordeon > div > div{
+  transition-delay: 0s;
+  transition-duration: 1s;
+  max-height: 0;
+  overflow: hidden;
 }
-.acordeon > div > div{}
+.acordeon > div > div >section{
+  padding: .4em;
+}
+.acordeon-buttons{
+  display: flex;
+  justify-content: space-around;
+}
+.acordeon-buttons button {
+  padding: .3em;
+  background-color: var(--main-background-color);
+  border:none;
+  font-size: .9em;
+  color: #fff;
+  border-radius: .3em;
+  cursor: pointer;
+  width: 40%;
+}
+@media(min-width: 1000px){
+  .acordeon{
+    width: 70%;
+    margin-left: 15%;
+  }
+  .acordeon-buttons button{
+    width: 20%;
+  }
+}
+.acordeon > div.active > div{
+  max-height: 50vh;
+  transition: max-height 1s;
+}
+.acordeon > div > label{
+  padding: .2em;
+  cursor: pointer;
+  display: block;
+}
+.upload-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-button{
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: .5em;
+  background-color: var(--main-background-color);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.upload-button::before,.upload-button::after{
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 70%;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.upload-button::after{
+  transform: translate(-50%,-50%) rotate(90deg);
+}
+.form-section{
+  padding: 0 2em;
+}
+.form-section input,.form-section textarea{
+  width: 100%;
+  padding: .5em;
+  resize: none;
+}
+.form-section textarea{
+  min-height: 5em;
+}
+@media(max-width: 1000px){
+  .form-section{
+    padding: 0 .5em;
+  }
+}
+.upload-zone{
+  cursor: pointer;
+  border: 3px dashed var(--main-background-color);
+  padding: 1em;
+  position: relative;
+  text-align: center;
+}
+.upload-zone div{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  height: 2em;
+  width: 2em;
+}
+.upload-zone div::before,.upload-zone div::after{
+  content: '';
+  position: absolute;
+  background-color: var(--main-background-color);
+  width: 70%;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.upload-zone div::after{
+  transform: translate(-50%,-50%) rotate(90deg);
+}
+.acordeon select{
+  min-width: 40%;
+  position: relative;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  background-color: white;
+  padding: .2em;
+  font-size: 1em;
+}
+.acordeon .centered-button{
+  min-width: 40%;
+  position: relative;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  background-color: var(--main-background-color);
+  margin: 1em 0;
+  color:#fff;
+  padding: .2em;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  border-radius: .3em;
+}
+.centered-text{
+  text-align: center;
+}
+.search-bar{
+  font-size: 1.2em;
+  border: 1px solid silver;
+}
+.search-bar *{
+  font-size: 1em;
+  border: none;
+  outline: none;
+  padding: .2em;
+}
+.search-bar input{
+  padding: 0 .6em;
+}
+.search-bar button{
+  cursor: pointer;
+  background-color: white;
+}
+.podcast-selector{
+  margin-right: 1em;
+  padding-right: .5em;
+  height: 100%;
+  display: flex;
+  position: relative;
+  border-right: 1px solid silver;
+  filter: grayscale(100%);
+}
+@keyframes comeDown{
+  from{transform: translate(-50%,-100px);opacity: 0}
+  to{transform: translate(-50%,10px);opacity: 1}
+}
+.podcast-selector-menu{
+  border: 1px solid silver;
+  animation: comeDown .3s;
+  transform: translate(-50%,10px);
+}
+.podcast-selector-menu::before{
+  content: '';
+  position: absolute;
+  border: 5px solid white;
+  top: 0;
+  left: 50%;
+  transform: translate(0,-50%) rotate(45deg);
+}

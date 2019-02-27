@@ -17,8 +17,8 @@ class PersonIcon extends Component{
 	render(){
 		return (
 			<div onClick={this.handleClick} style={{display:'flex',alignItems:'center'}}>
-				My Channel
-				<img alt="" src="defaultUser.png" className="header-like"/>
+				Me
+				<img alt="your account" src="/defaultUser.png" className="header-like"/>
 			</div>
 			)
 	}
