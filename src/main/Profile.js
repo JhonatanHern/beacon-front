@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import PictureInput from '../utils/PictureInput'
 
@@ -27,12 +27,11 @@ const SocialInput = props => {
 		)
 }
 
-
-class SignUp extends Component{
-	render(){
-		return (
+class Profile extends React.Component{
+	render(props) {
+		return(
 			<form>
-				<h2>Create Profile</h2>
+				<h2>Update Profile</h2>
 				<div className='b6 s12' style={{padding:'0 10%',marginBottom:'1em',position:'relative'}}>
 					<PictureInput />
 				</div>
@@ -55,10 +54,10 @@ class SignUp extends Component{
 				<SocialInput aside="true" name="twitter"/>
 				<SocialInput aside="true" name="youtube"/>
 				<SocialInput aside="true" name="quora"/>
-				<button className='send-button'>Create Profile</button>
+				<button className='send-button'>Update Profile</button>
 			</form>
 		)
 	}
 }
 
-export default SignUp
+export default Profile

@@ -466,3 +466,30 @@ form{
   border-radius: 50%;
   position: relative;
 }
+.default-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+button.default-button{
+  min-width: 40%;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  left: auto;
+  transform: none;
+  background-color: var(--main-background-color);
+  margin: .5em 0;
+  color:#fff;
+  padding: .4em;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: .3em;
+  text-align: center;
+  text-decoration: none;
+}
+.white-text{
+  color:white;
+  text-align: center;
+}

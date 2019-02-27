@@ -59,16 +59,15 @@ class Menu extends Component{
         </nav>
         
         <nav className={"right-menu" + ( this.state.secondMenu ? ' menu-on' : '' )}>
-          <Link to="/account">Account</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/settings">Settings</Link>
           <Link to="/statistics">Statistics</Link>
         </nav>
         <nav className="podcast-selector-menu" style={{display:this.state.displayPodcastSelector?'block':'none',left:this.state.podcastSelectorX+'px'}}>
-          <Link to="/my/podcast">Podcast #1</Link>
-          <Link to="/my/podcast">Podcast #2</Link>
-          <Link to="/my/podcast">Podcast #3</Link>
-          <Link to="/my/podcast">Podcast #4</Link>
+          <Link to="/my/podcast/1">Podcast #1</Link>
+          <Link to="/my/podcast/2">Podcast #2</Link>
+          <Link to="/my/podcast/3">Podcast #3</Link>
+          <Link to="/my/podcast/4">Podcast #4</Link>
         </nav>
         
         <Link id="signup" to="/signup" style={{display:'none'}}>sign up</Link>

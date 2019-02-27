@@ -46,7 +46,7 @@ class Settings extends React.Component{
 					<Color update={this.update} setColor={Settings.setColor} color="#990000"/>
 					<Color update={this.update} setColor={Settings.setColor} color="#690991"/>
 					<Color update={this.update} setColor={Settings.setColor} color="#00af0b"/>
-					<Color update={this.update} setColor={Settings.setColor} color="#1059ce"/>
+					<Color update={this.update} setColor={Settings.setColor} color="#020099"/>
 					<Color update={this.update} setColor={Settings.setColor} color="#e89600"/>
 				</div>
 			</div>

@@ -7,9 +7,11 @@ import Menu from './Menu'
 /* static ( for not logged users ) */
 import SignUp from './main/SignUp'
 import Welcome from './main/Welcome'
+import MyPodcast from './main/MyPodcast'
 
 /* main components */
 import Settings from './main/Settings'
+import Profile from './main/Profile'
 /*forms*/
 import AddEpisode from './main/forms/AddEpisode'
 import AddPodcast from './main/forms/AddPodcast'
@@ -36,6 +38,8 @@ class App extends Component {
             <Route exact path="/signup" render={(props) => <SignUp {...props} isAuthed={true} />}/>
 
             <Route exact path="/settings"  component={Settings}/>
+            <Route exact path="/profile"  component={Profile}/>
+            <Route path="/my/podcast/"  component={MyPodcast}/>
 
             <Route exact path="/add/episode"  render={(props) => <AddEpisode  {...props} isAuthed={true} />}/>
             <Route exact path="/add/podcast"  render={(props) => <AddPodcast  {...props} isAuthed={true} />}/>
