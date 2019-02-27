@@ -9,17 +9,20 @@ class MyPodcast extends Component{
     return (
       <React.Fragment>
         <div className="default-flex">
-          <button className="default-button" onClick={_=>this.setState({edit:false})}>
+          <h1>
+            My Podcast
+          </h1>
+          <button className="default-button" onClick={_=>this.setState({current:'data'})}>
             View podcast data
           </button>
-          <button className="default-button" onClick={_=>this.setState({edit:true})}>
+          <button className="default-button" onClick={_=>this.setState({current:'modify'})}>
             Modify podcast
           </button>
         </div>
-        <div style={{display:!this.state.edit?'block':'none'}} className="simple-form white-text">
-          <h3>
+        <div style={{display:this.state.current==="data"?'block':'none'}} className="simple-form white-text">
+          <h2>
             Data Download
-          </h3>
+          </h2>
           <div className="default-flex">
             <button className="default-button">Every download with metadata (CSV)</button>
             <button className="default-button">Every listen with metadata (CSV)</button>
@@ -33,8 +36,8 @@ class MyPodcast extends Component{
           Number of times shared each chapter: 2<br/>
           Total downloads: 90<br/>
         </div>
-        <div style={{display:this.state.edit?'block':'none'}} className="simple-form">
-            <h1>Modify Podcast</h1>
+        <div style={{display:this.state.current==='modify'?'block':'none'}} className="simple-form">
+            <h2 className="adjusted-title">Modify Podcast</h2>
             <label>name:</label>
             <input />
             <br/>

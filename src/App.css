@@ -23,7 +23,7 @@ body{
 a{
   color: var(--main-background-color);
 }
-h1{
+h1,.adjusted-title{
   color: white;
   text-align: center;
 }
