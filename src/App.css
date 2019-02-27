@@ -20,6 +20,9 @@ body{
   background-position: center;
   */
 }
+a{
+  color: var(--main-background-color);
+}
 h1{
   color: white;
   text-align: center;
@@ -405,7 +408,7 @@ form{
   left: 50%;
   transform: translate(0,-50%) rotate(45deg);
 }
-.simple-form input,.simple-form textarea,.simple-form label{
+.simple-form input,.simple-form textarea,.simple-form label,.simple-form select{
   width: 80%;
   margin-left: 10%;
   font-size: 1em;
@@ -440,4 +443,26 @@ form{
   border-radius: .3em;
   text-align: center;
   text-decoration: none;
+}
+.white-container{
+  background-color: white;
+  width: 80%;
+  margin-left: 10%;
+  position: relative;
+  padding: .4em;
+}
+.color-picker{
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.color-option{
+  cursor: pointer;
+  display: inline-block;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  position: relative;
 }
