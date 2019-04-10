@@ -1,8 +1,10 @@
 import React, { Component , Fragment } from 'react'
 import { BrowserRouter as Router , Route } from "react-router-dom"
-import './App.css'
+import './css/app.css'
 
 import Menu from './Menu'
+
+import LandingPage from './LandingPage'
 
 /* static ( for not logged users ) */
 import SignUp from './main/SignUp'
@@ -12,6 +14,7 @@ import MyPodcast from './main/MyPodcast'
 /* main components */
 import Settings from './main/Settings'
 import Profile from './main/Profile'
+
 /*forms*/
 import AddEpisode from './main/forms/AddEpisode'
 import AddPodcast from './main/forms/AddPodcast'
@@ -28,7 +31,11 @@ import ImportFromiTunes from './main/forms/ImportFromiTunes'
 // import Error404 from './utils/Error404'
 
 class App extends Component {
+  state = { logged : false }
   render() {
+    if(!this.state.logged){
+      return <LandingPage/>
+    }
     return (
       <Router>
         <Fragment>
@@ -54,6 +61,6 @@ class App extends Component {
   }
 }
 
-Settings.initColors()
+// Settings.initColors()
 
 export default App;

@@ -30,6 +30,7 @@ const AddEpisode = (props)=>(
 			<div>
 				<h2>Choose a quality level</h2>
 				<select>
+					<option disabled="true" selected="true">select one</option>
 					<option value="low">low</option>
 					<option value="medium">medium</option>
 					<option value="high">high</option>

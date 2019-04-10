@@ -1,5 +1,6 @@
 :root{
-  --main-background-color : #690991;
+  /*--main-background-color : #690991;*/
+  --main-background-color : #4c1068;
   --main-color : #222;
   --header-size : 7vh;
 }
@@ -15,7 +16,7 @@ body{
   position: relative;
   overflow-x:hidden;
   background-color: var(--main-background-color);
-  background-image: url('/background.png');
+  /*background-image: url('/background.png');*/
   /*
   background-position: center;
   */
