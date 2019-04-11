@@ -44,7 +44,7 @@ class Menu extends Component{
   }
   render(){
     return (
-      <header id="logger-header">
+      <header id="logged-header">
         <BurgerIcon onClick={ this.mainMenuToggle } open={this.state.mainMenu}/>
         <SearchBar />
         <div style={{display:'flex',alignItems:'center',position:'relative'}}>
