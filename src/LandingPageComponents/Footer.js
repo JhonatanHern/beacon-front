@@ -6,7 +6,7 @@ class Footer extends Component{
   render(){
     return (
       <footer>
-        <img alt="" src="beacon.png"/>
+        <img alt="" src="/beacon.png"/>
         <Filler/>
         <div>
           <div>

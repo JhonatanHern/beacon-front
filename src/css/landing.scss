@@ -1,5 +1,6 @@
 #landing{
-	width: 100vw;
+	width: 100%;
+	background-image: linear-gradient(to right,#280b46,#67098e);
 	header{
 		width: 100%;
 		background-color: transparent;
@@ -133,6 +134,83 @@
 				display: block;
 				text-decoration: none;
 			}
+		}
+	}
+	// forms
+	#landing-form-holder{
+		color: #fff;
+		overflow: hidden;
+		position: relative;
+		min-height: 33vw;
+		>img{
+			position: absolute;
+			width:100vw;
+			left: 0;
+			top:100%;
+			z-index: 0;
+			transform:translateY(-50%);
+			opacity:.55;
+		}
+		h2,>small{
+			position: relative;
+			z-index: 1;
+			text-align: center;
+			width: 100%;
+			display: block;
+		}
+		h2{
+			font-size: 1.8em;
+			margin-bottom: 0;
+		}
+		small{
+			margin-bottom: 1.5em;
+		}
+		.gray{
+			opacity: .7;
+			transition-duration:.3s;
+			&:hover{
+				opacity: 1;
+			}
+		}
+		form{
+			position: relative;
+			z-index: 1;
+			padding: 2em;
+			padding-bottom: 0;
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			// justify-content:space-around;
+			input{
+				width: 20em;
+				border: none;
+				padding: .7em;
+				font-size: 1em;
+				margin-bottom: 1em;
+				border-radius: .3em;
+				&[type="submit"]{
+					width: 13.4em;
+					border-radius: 2em;
+					padding: .3em;
+					color: #fff;
+					background-color: #690991;
+					font-weight: bold;
+					font-size: 1.5em;
+					margin-bottom: .3em;
+				}
+				&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+					color: #ccc;
+					letter-spacing: 1px;
+					opacity: 1; /* Firefox */
+				}
+			}
+			small.login-text{
+				margin-top: 0;
+			}
+		}
+		p{
+			text-align: center;
+			line-height: 1.6em;
 		}
 	}
 }

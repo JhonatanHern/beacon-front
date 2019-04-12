@@ -7,16 +7,16 @@ class Menu extends Component{
   render(){
     return (
       <header>
-        <img alt="" src="beacon.png"/>
+        <img alt="" src="/beacon.png"/>
         <Filler/>
         <Filler/>
         <nav>
-          <Link to="/signup">Sign up</Link>
+          <Link to="/auth/signup">Sign up</Link>
           <Filler/>
           <Filler/>
           <Filler/>
           <Filler/>
-          <Link to="/login">Log in</Link>
+          <Link to="/auth/login">Log in</Link>
         </nav>
       </header>
     )
