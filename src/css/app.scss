@@ -37,6 +37,7 @@ a{
     min-width: 40vw;
     display: flex;
     justify-content: space-around;
+    position: relative;
     >*{
       padding: .3em 2em;
       transition-duration: .2s;
@@ -56,33 +57,23 @@ a{
     }
   }
   nav{
+    z-index: 11;
     position: absolute;
     top: 100%;
     left: 0;
     display: inline-block;
-    background: white;
-    transform: translateX(-100%);
+    background-color: white;
+    color: var(--main-background-color);
+    transform: translateX(-50%);
     transition-duration: .3s;
-    padding: 1em 0;
-  }
-  nav.menu-on{
-    transform: none;
-  }
-  nav.right-menu{
-    left: 100%;
-    transform: none;
-  }
-  nav.right-menu.menu-on{
-    transform: translateX(-100%);
-  }
-  nav a{
-    display: block;
-    text-decoration: none;
-    padding: .5em 1.5em;
-    transition-duration: .3s;
-  }
-  nav a:hover{
-    background-color: #f0f0f0; 
+    left: 669px;
+    overflow: hidden;
+    a{
+      color:inherit;
+      background-color: white;
+      display: block;
+      padding: .5em 1em;
+    }
   }
 }
   
