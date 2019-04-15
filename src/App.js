@@ -1,6 +1,6 @@
 import React, { Component , Fragment } from 'react'
-import { BrowserRouter as Router , Route } from "react-router-dom"
-import './css/app.css'
+import { BrowserRouter as Router , Route , Switch } from "react-router-dom"
+import './css/app.scss'
 
 import Menu from './Menu'
 
@@ -31,7 +31,10 @@ import ImportFromiTunes from './main/forms/ImportFromiTunes'
 // import Error404 from './utils/Error404'
 
 class App extends Component {
-  state = { logged : false }
+  state = { logged : true }
+  changeState = e => {
+
+  }
   render() {
     if(!this.state.logged){
       return <LandingPage/>
@@ -41,19 +44,21 @@ class App extends Component {
         <Fragment>
           <Menu/>
           <main>
-            <Route exact path="/" render={(props) => <Welcome {...props} isAuthed={true} >START</Welcome>}/>
-            <Route exact path="/signup" render={(props) => <SignUp {...props} isAuthed={true} />}/>
+            <Switch>
+              <Route exact path="/" render={(props) => <Welcome {...props} isAuthed={true} >START</Welcome>}/>
+              <Route exact path="/signup" render={(props) => <SignUp {...props} isAuthed={true} />}/>
 
-            <Route exact path="/settings"  component={Settings}/>
-            <Route exact path="/profile"  component={Profile}/>
-            <Route path="/my/podcast/"  component={MyPodcast}/>
+              <Route exact path="/settings"  component={Settings}/>
+              <Route exact path="/profile"  component={Profile}/>
+              <Route path="/my/podcast/"  component={MyPodcast}/>
 
-            <Route exact path="/add/episode"  render={(props) => <AddEpisode  {...props} isAuthed={true} />}/>
-            <Route exact path="/add/podcast"  render={(props) => <AddPodcast  {...props} isAuthed={true} />}/>
-            <Route exact path="/add/playlist" render={(props) => <AddPlaylist {...props} isAuthed={true} />}/>
-            
-            <Route exact path="/add/podcast/new"  render={(props) => <CreatePodcast  {...props} isAuthed={true} />}/>
-            <Route exact path="/add/podcast/iTunes"  render={(props) => <ImportFromiTunes  {...props} isAuthed={true} />}/>
+              <Route exact path="/add/episode"  render={(props) => <AddEpisode  {...props} isAuthed={true} />}/>
+              <Route exact path="/add/podcast"  render={(props) => <AddPodcast  {...props} isAuthed={true} />}/>
+              <Route exact path="/add/playlist" render={(props) => <AddPlaylist {...props} isAuthed={true} />}/>
+              
+              <Route exact path="/add/podcast/new"  render={(props) => <CreatePodcast  {...props} isAuthed={true} />}/>
+              <Route exact path="/add/podcast/iTunes"  render={(props) => <ImportFromiTunes  {...props} isAuthed={true} />}/>
+            </Switch>
           </main>
         </Fragment>
       </Router>

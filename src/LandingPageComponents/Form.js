@@ -11,7 +11,7 @@ const Form = props => (
       :
       <Signup/>
     }
-    <img src="/landingIcons/waves.svg"/>
+    <img alt="" src="/landingIcons/waves.svg"/>
   </section>
 )
 
