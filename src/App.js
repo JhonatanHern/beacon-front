@@ -50,7 +50,7 @@ class App extends Component {
 
               <Route exact path="/settings"  component={Settings}/>
               <Route exact path="/profile"  component={Profile}/>
-              <Route path="/my/podcast/"  component={MyPodcast}/>
+              <Route path="/my-podcast/"  component={MyPodcast}/>
 
               <Route exact path="/add/episode"  render={(props) => <AddEpisode  {...props} isAuthed={true} />}/>
               <Route exact path="/add/podcast"  render={(props) => <AddPodcast  {...props} isAuthed={true} />}/>
